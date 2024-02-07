@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    background: rgb(203, 203, 203);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    gap: 40px;
+}
+
+.container header{
+    order: 1;
+}
+
+.container .food-section{
+    order: 2;
+}
+
+.container footer{
+    order: 3;
+}
+
+.container header{
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 2rem;
+}
+
+.container h1{
+    color: white;
+    word-spacing: 3px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.container header form{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container header form input{
+    width: 60%;
+    font-size: 1.15rem;
+    padding: 0.5rem 1rem 0.6rem;
+    outline: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.container header form input::placeholder{
+    font-weight: 600;
+}
+
+.container header form button{
+    padding: 0.56rem 2rem 0.65rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 0 0.4rem 0.4rem 0;
+    background-color: rgb(255, 172, 17);
+    color: rgb(2, 5, 65);
+    font-weight: 700;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container .food-section{
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.container .food-section .item{
+    width: 350px;
+    min-height: 380px;
+    background: white;
+    padding: 1.2rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.22);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    scale: 0;
+    opacity: 0;
+    animation: animate 1s linear forwards;
+}
+
+.container .food-section span{
+    color: red;
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    scale: 0;
+    opacity: 0;
+    animation: animate 0.8s linear forwards;
+}
+
+@keyframes animate {
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+
+.container .food-section .item img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+    transition: all 0.5s;
+}
+
+.container .food-section .item h2{
+    text-align: center;
+    word-spacing: 2px;
+    font-size: 1.2rem;
+    color: rgb(9, 9, 9);
+}
+
+.container .food-section .item button,
+.container .pop-window .main .link button{
+    padding: 0.7rem 2rem;
+    margin-bottom: 1rem;
+    background-color: rgb(255, 172, 17);
+    border: none;
+    border-radius:0.4rem ;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.container .pop{
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(15px);
+    width: 100%;
+}
+
+.container .pop-window{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 0.8rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.272);
+    padding: 1rem 1.5rem 2rem;
+    color: rgb(49, 49, 49);
+}
+
+.container .slowmo{
+    scale: 0;
+    opacity: 0;
+    animation: slowMotion 1s linear forwards;
+}
+
+
+.container .pop-window .cross{
+    display: flex;
+    justify-content: end;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.container .pop-window .cross i{
+    font-weight: 900;
+    cursor: pointer;
+    transform: translateX(25%);
+}
+
+.container .pop-window .headings{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container .pop-window .main{
+    height: 100%;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+.container .pop-window .instruct p{
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.65rem 1rem;
+}
+
+.container .pop-window .main .recipe-img,
+.container .pop-window .main .link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .pop-window .main .recipe-img{
+    margin: 2rem 0;
+}
+
+.container .pop-window .main .recipe-img img{
+   width: 380px;
+   height: 270px;
+   object-fit: cover;
+   object-position: center;
+   border-radius: 0.8rem;
+}
+
+.container .pop-window .main .link button{
+    background: rgb(247, 95, 40);
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes slowMotion {
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+footer{
+    background-color: rgb(10, 10, 10);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.footer-container{
+    text-align: center;
+}
+
+.footer-container p{
+    color: grey;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.footer-container i{
+    background-color: white;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    border-radius: 0.7rem;
+    color: black;
+}
+
+@media screen and (max-width : 660px){
+    .container header h1{
+        font-size: 1.5rem;
+    }
+
+    .container header form input{
+        width: 100%;
+    }
+}
