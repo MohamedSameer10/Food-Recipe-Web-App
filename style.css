@@ -293,9 +293,11 @@ footer{
         width: 400px;
     }
 
-    .container .food-section span{
-        font-size: 1.3rem;
+    .container .food-section span,
+   .container .food-section > h1 {
+        font-size: 1.4rem;
     }
+
 }
 
 @media screen and (max-width : 400px){
