@@ -287,4 +287,8 @@ footer{
     .container header form input{
         width: 100%;
     }
+
+    .container .pop-window{
+        width: 400px;
+    }
 }
