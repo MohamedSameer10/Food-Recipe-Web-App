@@ -281,7 +281,9 @@ footer{
 }
 
 @media screen and (max-width : 660px){
-    .container header h1{
+    .container header h1,
+    footer .footer-container h1,
+    footer .footer-container i{
         font-size: 1.5rem;
     }
 
@@ -296,6 +298,10 @@ footer{
     .container .food-section span,
    .container .food-section > h1 {
         font-size: 1.4rem;
+    }
+
+    footer .footer-container p{
+        font-size:0.9rem;
     }
 
 }
