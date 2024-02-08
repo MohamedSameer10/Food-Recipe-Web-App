@@ -112,6 +112,7 @@ body{
 .container .food-section span{
     color: red;
     font-weight: 800;
+    text-align: center;
     font-size: 2rem;
     letter-spacing: 2px;
     scale: 0;
