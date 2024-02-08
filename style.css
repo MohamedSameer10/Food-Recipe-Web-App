@@ -168,7 +168,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 600px;
-    height: 600px;
+    height: 550px;
     position: fixed;
     z-index: 1000;
     top: 50%;
@@ -286,5 +286,21 @@ footer{
 
     .container header form input{
         width: 100%;
+    }
+
+    .container .pop-window{
+        width: 400px;
+    }
+
+}
+
+
+@media screen and (max-width:410px) {
+    .container .pop-window{
+        width: 300px;
+    }
+
+    .container .pop-window .main .recipe-img img{
+        width: 200px;
     }
 }
