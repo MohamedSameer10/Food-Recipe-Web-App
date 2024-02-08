@@ -291,4 +291,16 @@ footer{
     .container .pop-window{
         width: 400px;
     }
+
+    .container .food-section span{
+        font-size: 1.3rem;
+    }
 }
+
+@media screen and (max-width : 400px){
+    .container .pop-window{
+        width: 300px;
+    }
+}
+
+
